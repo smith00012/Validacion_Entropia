@@ -55,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         die("La contraseña debe tener al menos 8 caracteres, una letra mayúscula, un número y un símbolo especial.");
     }
 
-    // Leer usuarios existentes
+    // Leer usuarios existenteede
     $usuarios_path = '../db/usuarios.json';
     if (!file_exists($usuarios_path)) {
         file_put_contents($usuarios_path, json_encode([]));
