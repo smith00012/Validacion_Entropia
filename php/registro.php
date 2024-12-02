@@ -21,7 +21,7 @@
 </head>
 <body>
     <h2 style="text-align:center;">Registro de Usuario</h2>
-    <form action="registro.php" method="POST">
+    <form action="registro.php" method="POST">        <!--combiar nombre ruta-->
         <label for="username">Nombre de usuario:</label>
         <input type="text" id="username" name="username" required>
 
@@ -55,7 +55,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         die("La contraseña debe tener al menos 8 caracteres, una letra mayúscula, un número y un símbolo especial.");
     }
 
-    // Leer usuarios existenteede
+    //hace una busqueda en el archivo json si usuario existe
+    // Leer usuarios existente
     $usuarios_path = '../db/usuarios.json';
     if (!file_exists($usuarios_path)) {
         file_put_contents($usuarios_path, json_encode([]));
